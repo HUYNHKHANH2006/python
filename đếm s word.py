@@ -1,20 +1,14 @@
-#Viết chương trình cho người dùng nhập 1 chuỗi (S) và 1 từ
-#(word). Đếm xem trong S có bao nhiêu từ word.
-#Ví dụ: kết quả sẽ in: số từ ai là 7 với word=’ai’
-#Và s = '''Chiều chiều trước bến Văn Lâu
-#Ai ngồi, ai câu, ai sầu, ai thảm
-#Ai thương, ai cảm, ai nhớ, ai trông
-#Thuyền ai thấp thoáng ven sông
-#Đưa câu mái vẩy chạnh lòng nước non '''
-s = '''Chiều chiều trước bến Văn Lâu
-Ai ngồi, ai câu, ai sầu, ai thảm    
-Ai thương, ai cảm, ai nhớ, ai trông
-Thuyền ai thấp thoáng ven sông
-Đưa câu mái vẩy chạnh lòng nước non '''
-word = 'ai'
-count = 0
-words = s.split() # công dụng hàm split để tách chuỗi thành các từ và lưu vào một danh sách
-for w in words:
-    if w.lower() == word.lower():
-        count += 1
-print(f'So tu {word} la {count} voi word=\'{word}\'')
+"""Viết chương trình cho người dùng nhập 1 chuỗi (S). Tìm xem
+nếu từ ‘poor’ đi sau từ ‘not’ thì thay đoạn từ ‘not’ đến ‘poor’
+thành duy nhất 1 từ ‘good’. Các trường hợp khác sẽ giữ nguyên
+chuỗi (S).
+Ví dụ:
+S= 'The lyrics is not that poor!'  xuất ra The lyrics is good!
+S= 'The lyrics is poor!’  xuất ra The lyrics is poor!
+"""
+s = input("Nhập chuỗi: ")
+not_index = s.find("not") 
+poor_index = s.find("poor")
+if not_index != -1 and poor_index != -1 and poor_index > not_index:
+    s = s[:not_index] + "good" + s[poor_index + len("poor"):]
+print(s)
