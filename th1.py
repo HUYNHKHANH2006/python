@@ -21,7 +21,7 @@ def chuyen_doi_tien(x, loai_tien):
     tong_so_to = 0
 
     for tien in loai_tien:
-        so_to = x // tien 
+        so_to = x // tien
         so_to_tien.append(so_to) 
         tong_so_to += so_to
         x -= so_to * tien
