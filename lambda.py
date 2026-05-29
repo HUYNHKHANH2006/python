@@ -67,3 +67,5 @@ triangle_type = lambda a, b, c: (
 print("i)", triangle_type(3, 4, 5))  #  Tam giác vuông
 print("i)", triangle_type(5, 5, 5))  #  Tam giác đều
 print("i)", triangle_type(1, 2, 3))  #  Không phải tam giác
+
+
